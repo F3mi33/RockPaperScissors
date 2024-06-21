@@ -12,6 +12,19 @@ switch(randomNumber){
   }
 }
 
+function getHumanChoice() {
+    const choice = prompt("Please enter your choice: rock, paper, or scissors").toLowerCase();
+    if (choice === "rock" || choice === "paper" || choice === "scissors") {
+        return choice;
+    } else {
+        console.log("Invalid choice. Please try again.");
+        return getHumanChoice(); // Recursively call the function again for a valid input
+    }
+}
+
+// Test the function
+console.log(getHumanChoice());
+
 console.log(getComputerChoice());
 console.log(getComputerChoice());
 console.log(getComputerChoice());
